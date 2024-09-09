@@ -8,6 +8,32 @@
   }
 }
 
+:root {
+  --swiper-navigation-color: #E49A38;
+  --swiper-pagination-inactive-color: #ffffff;
+  --swiper-pagination-inactive-opacity: 1;
+
+  --swiper-pagination-color: #E49A38;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+}
+
 .custom-border {
   border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+}
+
+/*scroll general de la página*/
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(30, 59, 50);
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
 }

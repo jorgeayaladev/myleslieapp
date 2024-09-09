@@ -1,7 +1,7 @@
-import React from 'react'
-
 export default function Species() {
   return (
-    <div>page</div>
+    <>
+      <section className="w-full bg-white">Species</section>
+    </>
   )
 }

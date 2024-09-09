@@ -1,7 +1,6 @@
 import Image from "next/image"
 import React from "react"
 import {
-  ContactOutlineIcon,
   ContactSolidIcon,
   EmailOutlineIcon,
   PencilOutlineIcon,
@@ -10,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="md:mb-10 p-5 grid grid-cols-1 md:grid-cols-2 gap-5 bg-lime-950 bg-opacity-90 rounded-t-lg md:rounded-lg shadow-lg">
+    <footer className="md:mb-10 p-5 grid grid-cols-1 md:grid-cols-2 gap-5 bg-lime-950 bg-opacity-90 sm:rounded-t-lg md:rounded-lg shadow-lg">
       <div className="col-span-1 flex flex-col">
         {/* LOGO */}
         <div className="p-5 flex items-center gap-4">
@@ -49,6 +48,7 @@ const Footer = () => {
               className="w-full focus:outline-none"
               type="email"
               placeholder="Ingresa tu Email.."
+              required
             />
           </div>
           <div className="px-5 py-3 flex gap-4 bg-white rounded-xl">

@@ -33,7 +33,7 @@ export default function RootLayout({
           {/* CONTENT CHANGING */}
           {children}
 
-          <hr className="my-5 md:my-10 h-1 bg-white rounded-lg" />
+          <hr className="my-0 sm:my-5 md:my-10 h-1 bg-white rounded-lg" />
 
           {/* FOOTER */}
           <Footer />

@@ -8,12 +8,12 @@ export default function Home() {
       {/* HEADER */}
       <Banner />
 
-      <hr className="my-5 md:my-10 h-1 bg-white rounded-lg" />
+      <hr className="mt-5 sm:my-5 md:my-10 h-1 bg-white rounded-lg" />
 
       {/* MAIN LAYOUT */}
       <main className="flex gap-10">
         {/* MAIN CONTENT */}
-        <div className="w-full lg:w-[75%] flex flex-col gap-5 lg:gap-10">
+        <div className="w-full lg:w-[75%] flex flex-col sm:gap-5 lg:gap-10">
           <MainContent />
         </div>
 
