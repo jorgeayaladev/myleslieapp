@@ -38,7 +38,7 @@ const MathCalculus = () => {
           Cálculo poblacional
         </h2>
         <small className="text-xs sm:text-sm md:text-base italic">
-          Estimación de crecimiento poblacional al año "t"
+          Estimación de crecimiento poblacional al año &#34;t&#34;
         </small>
       </div>
       {/* INPUT LABEL */}
@@ -75,7 +75,7 @@ const MathCalculus = () => {
             (el, index) => {
               let percentage = (Nf[index] / aM[index][2] - 1) * 100
               return (
-                <li className="" key={index}>
+                <li key={index}>
                   Los <b>{el}</b> han{" "}
                   <u>{percentage < 0 ? "disminuido" : "aumentado"}</u> a{" "}
                   <b>{Nf[index].toFixed(0)} individuos</b>; es decir,{" "}

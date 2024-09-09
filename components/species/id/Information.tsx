@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
+import { Fragment, useState } from "react"
 import { Navigation, Autoplay, Pagination, A11y } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
@@ -47,12 +47,11 @@ const Information = () => {
         <div className="col-span-2 px-2 py-1 sm:px-5 sm:py-2.5 bg-gray-800 text-gray-200">
           <p>
             <b>Otras definiciones</b>:{" "}
-            {mySpecie.definitions.map((el, i) => (
-              <>
-                {`"`}
-                <i>{el}</i>
-                {`"${i + 1 < mySpecie.definitions.length ? ", " : ""}`}
-              </>
+            {mySpecie.definitions.map((el, index) => (
+              <Fragment key={index}>
+                &#34;<i>{el}</i>&#34;
+                {index + 1 < mySpecie.definitions.length ? ", " : ""}
+              </Fragment>
             ))}
           </p>
         </div>

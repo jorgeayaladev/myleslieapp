@@ -76,7 +76,7 @@ export const LineChart = ({ data }: { data: ChartTypes }) => {
     }
 
     setChartData(data)
-  })
+  }, [data])
 
   return <Line data={chartData} options={options} ref={chartRef} />
 }

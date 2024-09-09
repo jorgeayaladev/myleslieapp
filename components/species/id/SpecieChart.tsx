@@ -27,7 +27,7 @@ const SpecieChart = () => {
           Proyección poblacional
         </h2>
         <small className="text-xs sm:text-sm md:text-base italic">
-          Evolución de la población al año "t"
+          Evolución de la población al año &#34;t&#34;
         </small>
       </div>
       {/* INPUT LABEL */}
@@ -57,7 +57,7 @@ const SpecieChart = () => {
             let total = 0
             for (let i = 0; i <= 2; i++) total += data.datasets[i].data[index]
             return (
-              <li className="" key={index}>
+              <li key={index}>
                 Al <b>{el}</b>, la <u>población</u> es de:{" "}
                 <i>{data.datasets[0].data[index]} Juveniles</i>
                 {", "}
@@ -68,7 +68,6 @@ const SpecieChart = () => {
               </li>
             )
           })}
-          {}
         </ul>
       </div>
     </section>
