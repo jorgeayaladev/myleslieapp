@@ -12,9 +12,9 @@ const SpecieChart = () => {
   }
 
   const aM = [
-    [0, 0.32, 69],
-    [1.9, 0.48, 67],
-    [2.1, 0, 31],
+    [0, 0.75, 57],
+    [1.8, 0.91, 60],
+    [2.59, 0, 33],
   ]
 
   let data = chartLeslieData(time, aM)
