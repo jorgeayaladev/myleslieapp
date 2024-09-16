@@ -11,19 +11,13 @@ import {
 } from "@/math/leslie"
 import { useState } from "react"
 
-const MathCalculus = () => {
+const MathCalculus = ({ aM }: { aM: number[][] }) => {
   const [time, setTime] = useState(1)
 
   const handleTime = (event: any) => {
     let { value, min, max } = event.target
     setTime(Math.max(Number(min), Math.min(Number(max), Number(value))))
   }
-
-  const aM = [
-    [0, 0.75, 57],
-    [1.8, 0.91, 60],
-    [2.59, 0, 33],
-  ]
 
   const No: number[] = initPopulation(aM)
   const L: number[][] = LeslieMatrix(aM)
@@ -43,7 +37,8 @@ const MathCalculus = () => {
       </div>
       {/* INPUT LABEL */}
       <label className="px-5 py-3 flex gap-2 sm:gap-4 bg-gradient-to-tr from-lime-100 to-lime-500 text-sm sm:text-base md:text-lg rounded-xl shadow-lg">
-        <CalculatorOutlineIcon styles="size-5 sm:size-6" /> <b>Ingresa un año:</b>
+        <CalculatorOutlineIcon styles="size-5 sm:size-6" />{" "}
+        <b>Ingresa un año:</b>
         <input
           className="w-min pl-2.5 focus:outline-none placeholder:text-xs sm:placeholder:text-sm border border-gray-900 rounded-lg"
           type="number"
@@ -57,7 +52,7 @@ const MathCalculus = () => {
       {/* CALCULUS */}
       <div className="flex flex-col items-center justify-center gap-4 text-xs sm:text-sm md:text-base">
         <div className="px-4 py-2 border border-gray-900 bg-yellow-100 rounded-xl shadow">
-          <InlineMath math={`{L^{t}}\\times{N(0)}`} />
+          <InlineMath math={`{L^{t}} \\times {N(0)}`} />
         </div>
         <InlineMath math={`{${p3x3M(L)}^{${time}}} \\times ${p3x1M(No)}`} />
         <InlineMath
@@ -80,8 +75,8 @@ const MathCalculus = () => {
                   <u>{percentage < 0 ? "disminuido" : "aumentado"}</u> a{" "}
                   <b>{Nf[index].toFixed(0)} individuos</b>; es decir,{" "}
                   <u>{percentage < 0 ? "disminuyeron" : "aumentaron"}</u> en un{" "}
-                  <b>{Math.abs(Number(percentage.toFixed(2)))}%</b> respecto a su
-                  población inicial.
+                  <b>{Math.abs(Number(percentage.toFixed(2)))}%</b> respecto a
+                  su población inicial.
                 </li>
               )
             }

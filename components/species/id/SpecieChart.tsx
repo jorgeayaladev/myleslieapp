@@ -3,19 +3,13 @@ import { CalculatorOutlineIcon } from "@/components/Icons"
 import { chartLeslieData } from "@/math/chart"
 import { useState } from "react"
 
-const SpecieChart = () => {
+const SpecieChart = ({ aM }: { aM: number[][] }) => {
   const [time, setTime] = useState(6)
 
   const handleTime = (event: any) => {
     let { value, min, max } = event.target
     setTime(Math.max(Number(min), Math.min(Number(max), Number(value))))
   }
-
-  const aM = [
-    [0, 0.75, 57],
-    [1.8, 0.91, 60],
-    [2.59, 0, 33],
-  ]
 
   let data = chartLeslieData(time, aM)
 
